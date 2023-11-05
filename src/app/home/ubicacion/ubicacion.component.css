@@ -1,0 +1,57 @@
+.mapa{
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+}
+.mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+.ubicacion{
+    background: #181818;
+    color: #fff;
+    padding: 0, 1.5em;
+    
+}
+
+.info{
+    background: #000;
+}
+
+.info h4, ul, p{
+    text-align: center;
+    margin: 0 0.1rem 0;
+}
+
+.info ul{
+    list-style: none;
+    padding: 0;
+}
+
+.info ul, li{
+    padding: .3em;
+}
+.info img{
+    height: auto;
+    width: 95%;
+    margin-left: 10px;
+    border-radius: 30px;
+    padding-bottom: 25px;
+}
+
+@media(min-width: 700px){
+    body{
+        padding: 0.4em;
+    }
+    .ubicacion{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .info h4,
+    .info ul,
+    .info p{
+        padding: 1em;
+        text-align: left;
+    }
+}
