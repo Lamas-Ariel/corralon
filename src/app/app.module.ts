@@ -9,6 +9,8 @@ import { ContactoModule } from './contacto/contacto.module';
 import { LoginModule } from './login/login.module';
 import { PresupuestoModule } from './presupuesto/presupuesto.module';
 import { ProductoModule } from './producto/producto.module';
+import {HttpClientModule} from '@angular/common/http';
+import { ProductoService } from '../app/services/producto.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,10 @@ import { ProductoModule } from './producto/producto.module';
     ContactoModule,
     LoginModule,
     PresupuestoModule,
-    ProductoModule
+    ProductoModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

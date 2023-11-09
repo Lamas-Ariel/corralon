@@ -1,1 +1,19 @@
-<p>card-producto works!</p>
+<div class="container py-5">
+    <div class="row m-0 d-flex justify-content-center">
+        <div class="col-3" *ngFor="let producto of productos">
+            <div class="card mb-5 shadow rounded">
+                <div class="card-header">
+                    <img src="assets/producto/{{producto.foto}}" class="card-img-top" alt="">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{producto.n_producto}}</h5>
+                    <p class="card-text">{{producto.marca}} Y {{producto.descripcion}} </p>
+                </div>
+                <div class="card-footer">
+                    <h3> {{producto.precio_producto}} $</h3>
+                    <button class="btn btn-warning rounde-pill">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
