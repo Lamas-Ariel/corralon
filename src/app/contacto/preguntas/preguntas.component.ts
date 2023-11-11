@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./preguntas.component.css']
 })
 export class PreguntasComponent {
-
+ // ngIf
+ show: boolean=true;
 }

@@ -14,6 +14,9 @@ import { PreguntasComponent } from './preguntas/preguntas.component';
   ],
   imports: [
     CommonModule
+
   ]
 })
-export class ContactoModule { }
+export class ContactoModule { 
+  
+}

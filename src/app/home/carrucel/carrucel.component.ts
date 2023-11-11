@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./carrucel.component.css']
 })
 export class CarrucelComponent {
-
+  
 }

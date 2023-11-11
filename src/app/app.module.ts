@@ -1,3 +1,4 @@
+import {RouterModule, Routes} from '@angular/router';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,6 +13,10 @@ import { ProductoModule } from './producto/producto.module';
 import {HttpClientModule} from '@angular/common/http';
 import { ProductoService } from '../app/services/producto.service';
 
+// const routes: Routes=[
+  // {path:'medios-pagos', component: MediosPagosComponent }
+// ];
+
 @NgModule({
   declarations: [
     AppComponent
@@ -25,8 +30,10 @@ import { ProductoService } from '../app/services/producto.service';
     LoginModule,
     PresupuestoModule,
     ProductoModule,
-    HttpClientModule
+    HttpClientModule,
+    // RouterModule.forRoot(routes)
   ],
+
   providers: [ProductoService],
   bootstrap: [AppComponent]
 })
