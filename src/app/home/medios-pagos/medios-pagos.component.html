@@ -1,2 +1,28 @@
- <p>medios-pagos works!</p>
+ <p>cards</p>
+ <main>
+    <p>seccion Productos en venta</p>
+    
+        <div class="d-flex justify-content-center text-center flex-wrap">
+            <div *ngFor="let t of lista2" class="card mx-2 my-2 shadow rounded" style="width: 18rem;">
+               <div class="card-header p-0"> 
+                    <img src="../../../assets/producto/bañera.png" height="250px" class="card-img-top">
+                </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{t.nombre}}</h5>
+                        <p class="card-text">{{t.marca}}</p>
+                        <p class="card-text">{{t.detalle}}</p>
+                        <p class="card-text">${{t.precio}}</p>
+                        <div class="d-flex justify-content-between align-items-center ">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-warning" (click)="verProducto(t)">Detalle</a>
+                            </div>
+                            <a href="carrito" class="btn btn-success" (click)="agregarCarrito(t)">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+   
+
+</main>
  
