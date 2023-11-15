@@ -1,0 +1,22 @@
+.accordion{
+    --bs-accordion-btn-bg: #feffc0;
+    --bs-accordion-active-bg: rgb(255, 203, 92);
+    --bs-accordion-btn-focus-box-shadow: none;
+    
+}
+
+.accordion-button:not(.collapsed){
+    box-shadow: none;
+}
+
+.navbar{
+    background-color: #feffc0 ;
+    border-radius: 12px;
+   
+
+}
+
+.alert{
+    border-color: black;
+    
+}
