@@ -1,19 +1,34 @@
 <div class="container py-5">
-    <div class="row m-0 d-flex justify-content-center">
-        <div class="col-3" *ngFor="let producto of productos">
-            <div class="card mb-5 shadow rounded">
-                <div class="card-header">
-                    <img src="assets/producto/{{producto.foto}}" class="card-img-top" alt="">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">{{producto.n_producto}}</h5>
-                    <p class="card-text">{{producto.marca}} Y {{producto.descripcion}} </p>
-                </div>
-                <div class="card-footer">
-                    <h3> {{producto.precio_producto}} $</h3>
-                    <button class="btn btn-warning rounde-pill">Agregar</button>
-                </div>
-            </div>
-        </div>
+
+    <div class="row">
+      <div class="col-4 justify-content-center">
+        <h1>Buscar producto</h1>
+        <input class="form-control me-2" type="search" [(ngModel)]="productoBuscado" placeholder="ingrese nombre producto" aria-label="Search">
+        <button class="btn btn-outline-success" (click)="buscarXNombre()" type="button">Buscar</button>
+      </div>
     </div>
+
+    <div class="container">
+        <div *ngIf="listarProductos.length>0" class="row justify-content-center">
+          <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let producto of listarProductos">
+            <div class="card mb-5 shadow rounded">
+              <div class="card-header">
+                <img src="assets/producto/{{producto.foto}}" class="card-img-top" alt="">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{producto.n_producto}}</h5>
+                <p class="card-text">{{producto.marca}} Y {{producto.descripcion}}</p>
+              </div>
+              <div class="card-footer">
+                <h3>{{producto.precio_producto}} $</h3>
+                <button class="btn btn-warning rounded-pill">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="listarProductos.length==0" class="alert alert-danger">
+            <h1>No se encontraron productos {{productoBuscado}}</h1>
+        </div>
+      </div>
 </div>

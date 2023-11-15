@@ -12,6 +12,8 @@ import { ProductoService } from 'src/app/services/producto.service';
 export class CardProductoComponent {
 
   productos:Producto[];
+  listarProductos: Producto[];
+  productoBuscado: string = '';
 
   constructor(private productoService:ProductoService , private router:Router){}
 
@@ -19,9 +21,14 @@ export class CardProductoComponent {
     this.productoService.getTodos()
     .subscribe(data=>{
       this.productos=data
+      this.listarProductos=data
     })
   }
 
-
+  buscarXNombre(): void{
+    this.listarProductos = this.productos.filter(nombre=>
+      nombre.n_producto.toUpperCase().includes(this.productoBuscado.toUpperCase()));
+    console.log(this.productos);
+  }
 
 }

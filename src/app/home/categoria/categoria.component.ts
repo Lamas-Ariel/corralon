@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categoria',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./categoria.component.css']
 })
 export class CategoriaComponent {
+
+  constructor(private router:Router){}
 
   // lista de categorias con imagenes
   categoria = [
@@ -16,4 +19,8 @@ export class CategoriaComponent {
     { nombre: 'pinturas', imagenUrl: 'assets/categoria/botes.png' },
     { nombre: 'sanitario y plomeria', imagenUrl: 'assets/categoria/baños.png' }
   ];
+
+  verProductos(){
+    this.router.navigate(["productos"])
+  }
 }

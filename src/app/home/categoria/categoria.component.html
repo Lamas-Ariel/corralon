@@ -1,12 +1,17 @@
 <section class="rubros">
-    <h2>Categorias y rubros</h2>
-    <div class="container py-3">
-      
-      <div class="card" *ngFor="let c of categoria">
-        <img [src]="c.imagenUrl" class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="#" class="link">{{c.nombre}}</a>
+  <h2>Categorias y rubros</h2>
+
+  <div class="container-fluid py-3">
+    <div class="row">
+      <div class="col-6 md-4 col-lg-2 mb-4 justify-content-center" *ngFor="let c of categoria">
+        <div class="card">
+          <img [src]="c.imagenUrl" class="card-img-top" alt="...">
+          <div class="card-body">
+            <button class="mb-2" (click)="verProductos()">{{c.nombre}}</button>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+
 </section>

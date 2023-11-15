@@ -5,6 +5,7 @@ import { DetalleComponent } from './detalle/detalle.component';
 import { FiltroComponent } from './filtro/filtro.component';
 import { CardProductoComponent } from './card-producto/card-producto.component';
 import { ProductoComponent } from './producto/producto.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,8 @@ import { ProductoComponent } from './producto/producto.component';
     ProductoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class ProductoModule { }
