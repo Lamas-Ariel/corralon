@@ -1,5 +1,6 @@
 import { Categoria } from "./Categoria";
 
+
 export class Producto{
     id:number;
     descripcion: string;
