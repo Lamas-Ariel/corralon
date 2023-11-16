@@ -1,22 +1,30 @@
+.container{
+    padding-block: 50px;
+display: flex;
+justify-content: center;
+align-content: center;
+}
 .mapa{
     margin: 10px;
     padding: 20px;
-    width: 100%;
+    width: 70%;
     height: auto;
 }
 .mapa iframe{
     width: 100%;
-    height: 100%;
+    height: 70%;
 }
 .ubicacion{
-    background: #181818;
-    color: #fff;
+  background-color: black; 
+  content: center-center;
+   color: #fff; 
     padding: 0, 1.5em;
-    
+    width: 70%;
+    height: 70%;
 }
 
 .info{
-    background: #000;
+    /* background: #797373(0, 0%, 0%); */
 }
 
 .info h4, ul, p{
