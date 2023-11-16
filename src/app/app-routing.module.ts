@@ -5,13 +5,14 @@ import { LoginComponent } from './login/login/login.component';
 import { ContactoComponent } from './contacto/contacto/contacto.component';
 import { PresupuestoComponent } from './presupuesto/presupuesto/presupuesto.component';
 import { ProductoComponent } from './producto/producto/producto.component';
-
+//import {CarritoComponent} from './pages/carrito/carrito.component';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
   {path:'contacto',component:ContactoComponent},
   {path:'presupuesto',component:PresupuestoComponent},
   {path:'productos',component:ProductoComponent}
+  //{path:'carrito',component:CarritoComponent}
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemCarrito } from 'src/app/models/itemCarrito';
 //import { TarjetProductos } from 'src/app/models/ventsModel';
 
 @Component({
@@ -7,13 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carriles.component.css']
 })
 export class CarrilesComponent implements OnInit{
-//lista:TarjetProductos[]=[
-  
-//];
-//listaTarjetas: TarjetProductos[]=[];
+
+  listaItemsCarrito: ItemCarrito [] | undefined
 
 ngOnInit(): void {
- // this.listaTarjetas=tarjetas;
+
+ let carritoStorage = localStorage.getItem("carrito") as string;
+ let carrito = JSON.parse(carritoStorage);
+ this.listaItemsCarrito = carrito 
+}
+vaciarCarrito(){
+  localStorage.clear();
+  this.listaItemsCarrito=[];
+
 }
 
 
