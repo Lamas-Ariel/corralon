@@ -1,0 +1,7 @@
+.btnEliminar{
+    cursor: pointer;
+}
+.btnEliminar:hover{
+    color:red;
+  
+}

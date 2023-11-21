@@ -14,12 +14,17 @@
                         <p class="card-text">{{t.detalle}}</p>
                         <p class="card-text">${{t.precio | number: '.2'}}</p>
                         <div class="d-flex justify-content-between align-items-center ">
-                            <div class="btn-group">
+                             <div class="btn-group">
                                 <a href="#" class="btn btn-warning" (click)="verProducto(t)">Detalle</a>
                             </div>
-                            <p class="btn btn-success" (click)="agregarCarrito(t)">Comprar</p>
+                         
+                            <i class="bi bi-cart-check btnCarrito " title='Agregar al Carrito' (click)="agregarCarrito(t)"></i>
                         </div>
                     </div>
+                    
+                        <a href=""></a>        
+                       
+                    
                 </div>
             </div>
       

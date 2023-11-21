@@ -70,5 +70,5 @@ console.log(this.productoElegido);
  
  }
  
-
+ 
 }

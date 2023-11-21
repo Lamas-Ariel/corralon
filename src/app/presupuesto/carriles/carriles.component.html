@@ -1,7 +1,7 @@
 <p>estoy en Crrilessss</p>
 
 <section class="padded">
-  <div class="container">
+  <div class="container table-responsive">
    
         <table class="table table-bordered table-hover">
             <thead>
@@ -11,18 +11,31 @@
                     <th>Precio</th>
                     <th>Cantidad</th>
                     <th>Subtotal</th>
+                    <th></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tbody-carrito">
                 <tr *ngFor="let item of listaItemsCarrito">
                     <td>{{item.id}}</td>
                     <td>{{item.nombre}}</td>
                     <td>{{item.precio | number: '.2'}}</td>
-                    <td>{{item.cantidad}}</td>
+                    <td> <button>-</button>
+                        {{item.cantidad}}
+                        <button>+</button>
+                    </td>
                     <td>{{item.precio*item.cantidad | number: '.2'}}</td>
-                    
+                    <td class="btnEliminar" title='Eliminar'(click)="eliminarProducto(item.id)"><i class="bi bi-trash3"></i></td>
                 </tr>
             </tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="4" class="text-end">Total</th>
+                            <th id="total-carrito" class="text-end"></th>
+                            </tr>
+                    </tfoot>
+                    
+               
+           
         </table>
    <button class="btn btn-danger center" (click)="vaciarCarrito()">Vaciar carrito</button>
     </div>
