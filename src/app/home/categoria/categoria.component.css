@@ -1,19 +1,21 @@
+
 .card-img-top {
     width: 130px;
     height: 100px;
     border-radius: 50%;
   }
-  
-  a {
+
+  button {
+    border: none;
     color: #473d38;
     font-size: 16px;
     font-weight: 600;
-    text-decoration: none;
   }
   
   .card {
     width: 8rem;
     height: 100px;
+    margin-bottom: 30px;
     border: 0;
     transition: transform 0.3s ease-in-out;
     

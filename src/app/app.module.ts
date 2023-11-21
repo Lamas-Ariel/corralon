@@ -12,6 +12,7 @@ import { PresupuestoModule } from './presupuesto/presupuesto.module';
 import { ProductoModule } from './producto/producto.module';
 import {HttpClientModule} from '@angular/common/http';
 import { ProductoService } from '../app/services/producto.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // const routes: Routes=[
   // {path:'medios-pagos', component: MediosPagosComponent }
@@ -32,6 +33,7 @@ import { ProductoService } from '../app/services/producto.service';
     ProductoModule,
     HttpClientModule,
     // RouterModule.forRoot(routes)
+    ReactiveFormsModule
   ],
 
   providers: [ProductoService],

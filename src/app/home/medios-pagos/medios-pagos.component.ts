@@ -1,8 +1,8 @@
 import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { productos } from '../data/dtosProductos';
-import { Producto } from 'src/app/models/productos2';
-import { ItemCarrito } from 'src/app/models/itemCarrito';
+import { Producto } from 'src/app/Models/productos2';
+import { ItemCarrito } from 'src/app/Models/itemCarrito';
 
 @Component({
   selector: 'app-medios-pagos',

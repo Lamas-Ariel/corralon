@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { tarjetas } from 'src/app/home/data/datos';
-import { Tarjeta } from 'src/app/models/preguntasy';
+import { Tarjeta } from 'src/app/Models/preguntasy';
 
 @Component({
   selector: 'app-preguntas',
