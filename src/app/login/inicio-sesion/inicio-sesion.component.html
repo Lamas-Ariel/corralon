@@ -1,1 +1,33 @@
-<p>inicio-sesion works!</p>
+<div class="container-fluid">
+    <div class="row login-container">
+        <div class="col-6 justify-content-center">
+            <form [formGroup]="loginForm" class="login-form">
+                <form [formGroup]="loginForm">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+                            <div *ngIf="email.errors?.['required']">
+                                El email es requerido.
+                            </div>
+                            <div *ngIf="email.errors?.['email']">
+                                El email debe tener un formato valido.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                            <div *ngIf="password.errors?.['required']">
+                                El password es requerido.
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" (click)="login()" class="btn btn-primary">Iniciar Seccion</button>
+                </form>
+            </form>
+        </div>
+    </div>
+</div>

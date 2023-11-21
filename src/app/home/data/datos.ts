@@ -1,4 +1,4 @@
-import { Tarjeta } from "src/app/models/preguntasy";
+import { Tarjeta } from "src/app/Models/preguntasy";
 
 export const tarjetas: Tarjeta[]=[
     {

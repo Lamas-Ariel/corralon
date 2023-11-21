@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -11,7 +12,8 @@ import { InicioSesionComponent } from './inicio-sesion/inicio-sesion.component';
     InicioSesionComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ]
 })
 export class LoginModule { }

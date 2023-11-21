@@ -1,4 +1,4 @@
-import { Producto } from "src/app/models/productos2";
+import { Producto } from "src/app/Models/productos2";
 export const productos: Producto []=[ 
 {   id: 1, 
     nombre: "Bañera", 
