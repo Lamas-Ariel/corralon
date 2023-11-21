@@ -1,16 +1,17 @@
 <div class="container py-5">
 
-    <div class="row">
-      <div class="col-4 justify-content-center">
-        <h1>Buscar producto</h1>
-        <input class="form-control me-2" type="search" [(ngModel)]="productoBuscado" placeholder="ingrese nombre producto" aria-label="Search">
-        <button class="btn btn-outline-success" (click)="buscarXNombre()" type="button">Buscar</button>
-      </div>
+  <div class="row">
+    <div class="col-4 justify-content-center">
+      <h1>Buscar producto</h1>
+      <input class="form-control me-2" type="search" [(ngModel)]="productoBuscado" placeholder="ingrese nombre producto"
+        aria-label="Search">
+      <button class="btn btn-outline-success" (click)="buscarXNombre()" type="button">Buscar</button>
     </div>
+  </div>
 
-    <div class="container">
-        <div *ngIf="listarProductos.length>0" class="row justify-content-center">
-          <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let producto of listarProductos">
+  <div class="container">
+    <div *ngIf="listarProductos.length>0" class="row justify-content-center">
+      <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let producto of listarProductos">
             <div class="card mb-5 shadow rounded">
               <div class="card-header">
                 <img src="assets/producto/{{producto.foto}}" class="card-img-top" alt="">
@@ -24,11 +25,28 @@
                 <button class="btn btn-warning rounded-pill">Agregar</button>
               </div>
             </div>
+      <!-- <div *ngFor="let t of listarProductos" class="card mx-2 my-2 shadow rounded col-sm-6 col-md-4 col-lg-3"
+        style="width: 18rem;">
+        <div class="card-header p-0">
+          <img src="../../../assets/producto/{{t.foto}}" height="250px" class="card-img-top">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{t.n_producto}}</h5>
+          <p class="card-text">{{t.marca}}</p>
+          <p class="card-text">{{t.descripcion}}</p>
+          <p class="card-text">${{t.precio_producto}}</p>
+          <div class="d-flex justify-content-between align-items-center ">
+            <div class="btn-group">
+              <a href="#" class="btn btn-warning" (click)="verProducto(t)">Detalle</a>
+            </div>
+            <a href="carrito" class="btn btn-success" (click)="agregarCarrito(t)">Comprar</a>
           </div>
         </div>
+      </div> -->
+    </div>
+  </div>
 
-        <div *ngIf="listarProductos.length==0" class="alert alert-danger">
-            <h1>No se encontraron productos {{productoBuscado}}</h1>
-        </div>
-      </div>
+  <div *ngIf="listarProductos.length==0" class="alert alert-danger">
+    <h1>No se encontraron productos {{productoBuscado}}</h1>
+  </div>
 </div>

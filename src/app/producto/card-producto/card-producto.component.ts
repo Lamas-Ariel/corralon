@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Producto } from 'src/app/Models/Producto';
+import { ItemCarrito } from 'src/app/Models/itemCarrito';
 import { ProductoService } from 'src/app/services/producto.service';
 
 
@@ -30,5 +31,30 @@ export class CardProductoComponent {
       nombre.n_producto.toUpperCase().includes(this.productoBuscado.toUpperCase()));
     console.log(this.productos);
   }
+
+  //carrito
+//   ItemCarrit: ItemCarrito;
+//   lista2: Producto []= [];
+//   productoElegido: Producto=new Producto();
+  
+
+
+  
+//  verProducto(pro: Producto): void{
+// this.productoElegido = pro;
+// console.log(this.productoElegido);
+//  }
+
+//  agregarCarrito(item: Producto){
+//   let iCarrito: ItemCarrito = {
+//     id:item.id,
+//     nombre:item.n_producto,
+//     precio:item.precio_producto,
+//     cantidad: 1
+//   }
+//   let carrito: ItemCarrito []= [];
+//   carrito.push(iCarrito);
+//   localStorage.setItem("carrito",JSON.stringify(carrito));
+//  }
 
 }
