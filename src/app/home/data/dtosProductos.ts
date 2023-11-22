@@ -1,4 +1,4 @@
-import { Producto } from "src/app/Models/productos2";
+import { Producto } from "src/app/models/productos2";
 export const productos: Producto []=[ 
 {   id: 1, 
     nombre: "Bañera", 
@@ -14,12 +14,12 @@ export const productos: Producto []=[
     marca: "Daewoo",
     detalle: "20 litros, exterior e interior", 
     precio: 2000, 
-    imagen: 'corrlon.png' 
+    imagen: 'pintura.png' 
 },
 {
     id: 3, 
-    nombre: "Bloque", 
-    marca: "Daewoo",detalle: "visto en diferentes colores.", precio: 2000, imagen: 'corrlon.png' },
+    nombre: "Cerámico", 
+    marca: "Vop",detalle: "visto en diferentes colores.", precio: 2000, imagen: 'ceramico.png' },
 
    
    
