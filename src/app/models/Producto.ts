@@ -1,4 +1,4 @@
-import { Categoria } from "./Categoria";
+//import { Categoria } from "./Categoria";
 
 
 export class Producto{
@@ -9,7 +9,7 @@ export class Producto{
     marca: string;
     n_producto: string;
     precio_producto: number;
-    categoria: Categoria;
+  //  categoria: Categoria;
     
     constructor(){
         

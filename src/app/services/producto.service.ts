@@ -10,7 +10,7 @@ export class ProductoService {
 
   constructor(private http:HttpClient) { }
 
-  Url = 'http://localhost:8080/api/productos';
+  Url = 'http://localhost:8084/api/productos';
 
   //observable sacar si no funciona junto con su importacion
   getTodos():Observable<Producto[]>{
