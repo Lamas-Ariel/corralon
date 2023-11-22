@@ -4,7 +4,7 @@ export class FacturaA{
     
         id: number;
         usuario: {
-           UsuarioAarioA
+        UsuarioA
             
         };
         fecha_venta: Date;
