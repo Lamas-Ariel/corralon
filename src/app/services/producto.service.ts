@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { Producto } from '../Models/Producto';
+import { ProductosA } from '../models/modelsA/ProductosA';
 
 @Injectable({
   providedIn: 'root'
@@ -9,27 +9,27 @@ import { Producto } from '../Models/Producto';
 export class ProductoService {
 
   constructor(private http:HttpClient) { }
-
-  Url = 'http://localhost:8084/api/productos';
-
-  //observable sacar si no funciona junto con su importacion
-  getTodos():Observable<Producto[]>{
-    return this.http.get<Producto[]>(this.Url);
+//url puerto: ap propieties by Spring
+  private urlEndPoint: string = 'http://localhost:8084/api'+'/producto';
+//obtener Todos
+  getTodos():Observable<ProductosA[]>{
+    return this.http.get<ProductosA[]>(this.urlEndPoint);
   }
-  //crear producto
-  crear(producto:Producto):Observable<Producto>{
-    return this.http.post<Producto>(this.Url, producto);
+//obtener x id
+  getXid(id:number):Observable<ProductosA>{
+    return this.http.get<ProductosA>(this.urlEndPoint+'/'+id);
   }
-
-  getXid(id:number):Observable<Producto>{
-    return this.http.get<Producto>(this.Url+'/'+id);
-  }
-
-  actualizar(producto:Producto):Observable<Producto>{
-    return this.http.put<Producto>(this.Url+'/'+producto.id, producto);
+  //crear 
+  crear(producto:ProductosA):Observable<ProductosA>{
+    return this.http.post<ProductosA>(this.urlEndPoint, producto);
   }
 
+  //actualizar
+  actualizar(ProductosA:ProductosA):Observable<ProductosA>{
+    return this.http.put<ProductosA>(this.urlEndPoint+'/'+ProductosA.id, ProductosA);
+  }
+//eliminar
   borrar(id:number):Observable<any>{
-    return this.http.delete(this.Url+'/'+id);
+    return this.http.delete(this.urlEndPoint+'/'+id);
   }
 }
