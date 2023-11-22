@@ -11,6 +11,7 @@ export class Producto{
 <<<<<<< HEAD
     n_producto: string;
     precio_producto: number;
+nom: any;
   //  categoria: Categoria;
 =======
     nom: string;
