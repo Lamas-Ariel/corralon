@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { tarjetas } from 'src/app/home/data/datos';
+import { tarjetas } from 'src/app/data/datos';
 import { Tarjeta } from 'src/app/Models/preguntasy';
 
 @Component({

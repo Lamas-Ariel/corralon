@@ -1,6 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { productos } from '../data/dtosProductos';
+import { productos } from '../../data/dtosProductos';
 import { Producto } from 'src/app/models/productos2';
 import { ItemCarrito } from 'src/app/models/itemCarrito';
 
