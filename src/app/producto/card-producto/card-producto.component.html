@@ -11,30 +11,30 @@
 
   <div class="container">
     <div *ngIf="listarProductos.length>0" class="row justify-content-center">
-      <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let producto of listarProductos">
+      <!-- <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let producto of listarProductos">
             <div class="card mb-5 shadow rounded">
               <div class="card-header">
                 <img src="assets/producto/{{producto.foto}}" class="card-img-top" alt="">
               </div>
               <div class="card-body">
-                <h5 class="card-title">{{producto.n_producto}}</h5>
-                <p class="card-text">{{producto.marca}} Y {{producto.descripcion}}</p>
+                <h5 class="card-title">{{producto.nom}}</h5>
+                <p class="card-text">{{producto.marca}} {{producto.descripcion}}</p>
               </div>
               <div class="card-footer">
-                <h3>{{producto.precio_producto}} $</h3>
+                <h3>{{producto.precio}} $</h3>
                 <button class="btn btn-warning rounded-pill">Agregar</button>
               </div>
-            </div>
-      <!-- <div *ngFor="let t of listarProductos" class="card mx-2 my-2 shadow rounded col-sm-6 col-md-4 col-lg-3"
+            </div> -->
+      <div *ngFor="let t of listarProductos" class="card mx-2 my-2 shadow rounded col-sm-6 col-md-4 col-lg-3"
         style="width: 18rem;">
         <div class="card-header p-0">
           <img src="../../../assets/producto/{{t.foto}}" height="250px" class="card-img-top">
         </div>
         <div class="card-body">
-          <h5 class="card-title">{{t.n_producto}}</h5>
+          <h5 class="card-title">{{t.nom}}</h5>
           <p class="card-text">{{t.marca}}</p>
           <p class="card-text">{{t.descripcion}}</p>
-          <p class="card-text">${{t.precio_producto}}</p>
+          <p class="card-text">${{t.precio}}</p>
           <div class="d-flex justify-content-between align-items-center ">
             <div class="btn-group">
               <a href="#" class="btn btn-warning" (click)="verProducto(t)">Detalle</a>
@@ -42,7 +42,7 @@
             <a href="carrito" class="btn btn-success" (click)="agregarCarrito(t)">Comprar</a>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 

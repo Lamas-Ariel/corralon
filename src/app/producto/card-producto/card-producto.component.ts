@@ -28,33 +28,33 @@ export class CardProductoComponent {
 
   buscarXNombre(): void{
     this.listarProductos = this.productos.filter(nombre=>
-      nombre.n_producto.toUpperCase().includes(this.productoBuscado.toUpperCase()));
+      nombre.nom.toUpperCase().includes(this.productoBuscado.toUpperCase()));
     console.log(this.productos);
   }
 
-  //carrito
-//   ItemCarrit: ItemCarrito;
-//   lista2: Producto []= [];
-//   productoElegido: Producto=new Producto();
+  carrito
+ItemCarrit: ItemCarrito;
+lista2: Producto []= [];
+productoElegido: Producto=new Producto();
   
 
 
   
-//  verProducto(pro: Producto): void{
-// this.productoElegido = pro;
-// console.log(this.productoElegido);
-//  }
+verProducto(pro: Producto): void{
+this.productoElegido = pro;
+console.log(this.productoElegido);
+}
 
-//  agregarCarrito(item: Producto){
-//   let iCarrito: ItemCarrito = {
-//     id:item.id,
-//     nombre:item.n_producto,
-//     precio:item.precio_producto,
-//     cantidad: 1
-//   }
-//   let carrito: ItemCarrito []= [];
-//   carrito.push(iCarrito);
-//   localStorage.setItem("carrito",JSON.stringify(carrito));
-//  }
+agregarCarrito(item: Producto){
+let iCarrito: ItemCarrito = {
+id:item.id,
+  nombre:item.nom,
+  precio:item.precio,
+  cantidad: 1
+}
+let carrito: ItemCarrito []= [];
+carrito.push(iCarrito);
+localStorage.setItem("carrito",JSON.stringify(carrito));
+}
 
 }
