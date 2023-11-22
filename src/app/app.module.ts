@@ -11,7 +11,7 @@ import { LoginModule } from './login/login.module';
 import { PresupuestoModule } from './presupuesto/presupuesto.module';
 import { ProductoModule } from './producto/producto.module';
 import {HttpClientModule} from '@angular/common/http';
-import { productoservice } from './services/Producto.service';
+import { productoservice } from './services/producto.service';
 import { ReactiveFormsModule } from '@angular/forms';
 
 // const routes: Routes=[
