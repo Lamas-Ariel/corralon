@@ -2,7 +2,7 @@ import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { productos } from '../data/dtosProductos';
 import { Producto } from 'src/app/Models/productos2';
-import { ItemCarrito } from 'src/app/Models/itemCarrito';
+import { ItemCarrito } from '../../models/itemCarrito';
 
 @Component({
   selector: 'app-medios-pagos',
@@ -33,16 +33,42 @@ console.log(this.productoElegido);
  }
 
  agregarCarrito(item: Producto){
-  let iCarrito: ItemCarrito = {
+  let iCarrito: ItemCarrito = {   //iCarrito es la variable q se va agregando
     id:item.id,
     nombre:item.nombre,
     precio:item.precio,
     cantidad: 1
   }
-  let carrito: ItemCarrito []= [];
-  carrito.push(iCarrito);
-  localStorage.setItem("carrito",JSON.stringify(carrito));
+  if(localStorage.getItem("carrito") === null){
+    let carrito: ItemCarrito []= [];
+    carrito.push(iCarrito);
+    localStorage.setItem("carrito",JSON.stringify(carrito));
+  }
+  else{
+    let carritoStorage = localStorage.getItem("carrito") as string;
+    let carrito = JSON.parse(carritoStorage);
+    let index = -1;
+    for(let i=0; i < carrito.length; i++){
+  let itemC:ItemCarrito=carrito [i];
+  if(iCarrito.id=== itemC.id){
+  index=i;
+  break;
+ }
+  }
+  if(index===-1){
+    carrito.push(iCarrito);
+    localStorage.setItem("carrito",JSON.stringify(carrito));
+  }else{
+    let itemCarrito: ItemCarrito= carrito[index];
+    itemCarrito.cantidad++;
+    carrito[index]=itemCarrito;
+    localStorage.setItem("carrito",JSON.stringify(carrito));
+  }
+
+   
+  }
+ 
  }
  
-
+ 
 }
