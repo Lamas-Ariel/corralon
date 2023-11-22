@@ -1,32 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
-import { ProductosA } from '../models/modelsA/ProductosA';
+import { productos } from '../home/data/dtosProductos';
+import { Producto } from '../models/Producto';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductoService {
+export class productoservice {
 
   constructor(private http:HttpClient) { }
 //url puerto: ap propieties by Spring
   private urlEndPoint: string = 'http://localhost:8084/api'+'/producto';
 //obtener Todos
-  getTodos():Observable<ProductosA[]>{
-    return this.http.get<ProductosA[]>(this.urlEndPoint);
+  getTodos():Observable<Producto[]>{
+    return this.http.get<Producto[]>(this.urlEndPoint);
   }
 //obtener x id
-  getXid(id:number):Observable<ProductosA>{
-    return this.http.get<ProductosA>(this.urlEndPoint+'/'+id);
+  getXid(id:number):Observable<Producto>{
+    return this.http.get<Producto>(this.urlEndPoint+'/'+id);
   }
   //crear 
-  crear(producto:ProductosA):Observable<ProductosA>{
-    return this.http.post<ProductosA>(this.urlEndPoint, producto);
+  crear(producto:Producto):Observable<Producto>{
+    return this.http.post<Producto>(this.urlEndPoint, producto);
   }
 
   //actualizar
-  actualizar(ProductosA:ProductosA):Observable<ProductosA>{
-    return this.http.put<ProductosA>(this.urlEndPoint+'/'+ProductosA.id, ProductosA);
+  actualizar(Producto:Producto):Observable<Producto>{
+    return this.http.put<Producto>(this.urlEndPoint+'/'+Producto.id, Producto);
   }
 //eliminar
   borrar(id:number):Observable<any>{

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Producto } from 'src/app/Models/Producto';
-import { ItemCarrito } from 'src/app/Models/itemCarrito';
-import { ProductoService } from 'src/app/services/producto.service';
+import { Producto } from 'src/app/models/Producto';
+import { ItemCarrito } from 'src/app/models/itemCarrito';
+import { productoservice } from 'src/app/services/producto.service';
+
 
 
 @Component({
@@ -16,10 +17,10 @@ export class CardProductoComponent {
   listarProductos: Producto[];
   productoBuscado: string = '';
 
-  constructor(private productoService:ProductoService , private router:Router){}
+  constructor(private productoservice:productoservice , private router:Router){}
 
   ngOnInit(){
-    this.productoService.getTodos()
+    this.productoservice.getTodos()
     .subscribe(data=>{
       this.productos=data
       this.listarProductos=data
@@ -49,7 +50,7 @@ agregarCarrito(item: Producto){
 let iCarrito: ItemCarrito = {
 id:item.id,
   nombre:item.nom,
-  precio:item.precio,
+  precio:item.precio_producto,
   cantidad: 1
 }
 let carrito: ItemCarrito []= [];
