@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Producto } from 'src/app/models/Producto';
 import { ItemCarrito } from 'src/app/models/itemCarrito';
-import { productoservice } from 'src/app/services/producto.service';
+import { productoservice } from 'src/app/services/Producto.service';
 
 
 
