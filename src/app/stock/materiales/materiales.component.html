@@ -1,0 +1,31 @@
+<!-- <p>materiales works!</p>
+<h1>ELEGÍ  TUS PRODUCTOS</h1>
+
+<div class="row" >
+
+
+<div class="col - sm-12 col-md-6 col-lg-4 col-xl-3 my-2 d-flex justify-content-end" *ngFor="let t of listamateriales">
+    <div class="card" style="width: 17rem;">
+  <div class="card shadow rounded" [ngClass]="(t.id)">
+  
+        <div class="card-header">
+        <h4 class="card-title">{{t.titulo}}</h4>
+        <img src="../../../assets/guia2/{{t.imagen}}" alt="" class="card-img-top" alt="cursos">
+    </div>
+    <div class="card-body" >
+        <h5>{{t.descripcion}}</h5>
+        <h6 class="text muted">Dificultad: {{t.dificultad}}  </h6>
+    </div>
+   <div class="footer-card">
+    <button class="strong text-center  btn btn white justify-content-md-center rounde-pill"(click)="seleccionTrekking(t)">$ {{t.precio}}</button>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+        <button class="btn btn-dark  btn-lg rouded pill" (click)=" verDetalle(t)" >Quiero saber más</button>
+      </div>
+    </div>
+      
+       
+      </div>
+   </div>
+</div>
+</div> -->

@@ -19,7 +19,7 @@ export class MediosPagosComponent implements OnInit{
   constructor(private productoservice : ProductoService){
     this.productoservice.getTodos().subscribe(respose => {
       this.lista2 = respose;
-      console.log(respose);
+      console.log(this.lista2);
     })
     console.log('prueba'+this.lista2); 
      
