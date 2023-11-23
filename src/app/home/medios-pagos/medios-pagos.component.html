@@ -4,12 +4,12 @@
         <div class="d-flex justify-content-center text-center flex-wrap">
             <div *ngFor="let t of lista2" class="card mx-2 my-2 shadow rounded" style="width: 18rem;">
                <div class="card-header p-0"> 
-                    <img src="../../../assets/producto/{{t.imagen}}" height="250px" class="card-img-top">
+                    <img src="../../../assets/producto/{{t.foto}}" height="250px" class="card-img-top">
                 </div>
                     <div class="card-body">
-                        <h5 class="card-title">{{t.nombre}}</h5>
+                        <h5 class="card-title">{{t.nom}}</h5>
                         <p class="card-text">{{t.marca}}</p>
-                        <p class="card-text">{{t.detalle}}</p>
+                        <p class="card-text">{{t.caracteristica}}</p>
                         <p class="card-text">${{t.precio | number: '.2'}}</p>
                         <div class="d-flex justify-content-between align-items-center ">
                              <div class="btn-group">

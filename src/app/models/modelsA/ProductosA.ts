@@ -7,8 +7,7 @@ export class ProductosA{
         caracteristica: string;
         marca: string;
         descripcion: string;
-        categoria: {
-            CategoriaA 
-        };
+        categoria: 
+            CategoriaA ;
         foto: string
     }

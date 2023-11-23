@@ -1,4 +1,4 @@
-import { Tarjeta } from "src/app/Models/preguntasy";
+import { Tarjeta } from '../models/preguntasy';
 
 export const tarjetas: Tarjeta[]=[
     {
@@ -8,7 +8,7 @@ export const tarjetas: Tarjeta[]=[
     },
     {
         id:2,
-        respuesta: 'vendemos palas, estacas y machetes',
+        respuesta: 'vendemos palas, estacas y machetes', 
         preguntadelUsuario: 'venden articulos de jardineria'
     },
     {

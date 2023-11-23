@@ -1,4 +1,4 @@
 export class RolA{
-    id: 1;
+    id: number;
     n_nombre: string
 }

@@ -9,14 +9,12 @@ import { HomeModule } from './home/home.module';
 import { ContactoModule } from './contacto/contacto.module';
 import { LoginModule } from './login/login.module';
 import { PresupuestoModule } from './presupuesto/presupuesto.module';
-import { ProductoModule } from './producto/producto.module';
 import {HttpClientModule} from '@angular/common/http';
-import { productoservice } from './services/producto.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductoService } from 'src/app/services/producto.services';
 
 // const routes: Routes=[
   // {path:'medios-pagos', component: MediosPagosComponent }
-// ];
 
 @NgModule({
   declarations: [
@@ -30,13 +28,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactoModule,
     LoginModule,
     PresupuestoModule,
-    ProductoModule,
     HttpClientModule,
-    // RouterModule.forRoot(routes)
-    ReactiveFormsModule
+   // RouterModule.forRoot(RouterModule)
+    //ReactiveFormsModule,
   ],
 
-  providers: [productoservice],
+  providers: [ProductoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,8 +1,9 @@
 import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { productos } from '../../data/dtosProductos';
-import { Producto } from 'src/app/models/productos2';
-import { ItemCarrito } from 'src/app/models/itemCarrito';
+import { ProductosA } from 'src/app/models/modelsA/ProductosA';
+import { ItemA } from '../../models/modelsA/ItemA';
+import { itemCarrito } from '../../models/ItemCarrito';
+import { ProductoService } from 'src/app/services/producto.services';
 
 @Component({
   selector: 'app-medios-pagos',
@@ -10,16 +11,27 @@ import { ItemCarrito } from 'src/app/models/itemCarrito';
   styleUrls: ['./medios-pagos.component.css']
 })
 export class MediosPagosComponent implements OnInit{
-  ItemCarrit: ItemCarrito;
-  lista2: Producto []= [];
-  productoElegido: Producto=new Producto();
+  ItemA: ItemA;
+  lista2: ProductosA []= [];
+  productoElegido: ProductosA=new ProductosA();
   
   
-  constructor(){
-    this.lista2=productos;
-     console.log('prueba'+this.lista2); 
+  constructor(private productoservice : ProductoService){
+    this.productoservice.getTodos().subscribe(respose => {
+      this.lista2 = respose;
+      console.log(respose);
+    })
+    console.log('prueba'+this.lista2); 
      
    }
+
+cargar():void {
+  this.productoservice.getTodos().subscribe(respose => {
+    this.lista2 = respose;
+    console.log(respose);
+  })
+}
+
   ngOnInit(): void {
     throw new Error('Method not implemented.');
     console.log(this.lista2);
@@ -27,20 +39,18 @@ export class MediosPagosComponent implements OnInit{
 
 
   
- verProducto(pro: Producto): void{
+ verProducto(pro: ProductosA ): void{
 this.productoElegido = pro;
 console.log(this.productoElegido);
  }
 
- agregarCarrito(item: Producto){
-  let iCarrito: ItemCarrito = {   //iCarrito es la variable q se va agregando
+ agregarCarrito(item: ProductosA){
+  let iCarrito: ItemA= {   
     id:item.id,
-    nombre:item.nombre,
-    precio:item.precio,
     cantidad: 1
   }
   if(localStorage.getItem("carrito") === null){
-    let carrito: ItemCarrito []= [];
+    let carrito: ItemA []= [];
     carrito.push(iCarrito);
     localStorage.setItem("carrito",JSON.stringify(carrito));
   }
@@ -49,7 +59,7 @@ console.log(this.productoElegido);
     let carrito = JSON.parse(carritoStorage);
     let index = -1;
     for(let i=0; i < carrito.length; i++){
-  let itemC:ItemCarrito=carrito [i];
+  let itemC:ItemA=carrito [i];
   if(iCarrito.id=== itemC.id){
   index=i;
   break;
@@ -59,7 +69,7 @@ console.log(this.productoElegido);
     carrito.push(iCarrito);
     localStorage.setItem("carrito",JSON.stringify(carrito));
   }else{
-    let itemCarrito: ItemCarrito= carrito[index];
+    let itemCarrito: ItemA= carrito[index];
     itemCarrito.cantidad++;
     carrito[index]=itemCarrito;
     localStorage.setItem("carrito",JSON.stringify(carrito));

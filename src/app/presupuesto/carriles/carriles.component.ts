@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ItemCarrito } from './../../models/itemCarrito';
+import { ItemA } from 'src/app/models/modelsA/ItemA';
  //import { TarjetProductos } from 'src/app/models/ventsModel';
 
 @Component({
   selector: 'app-carriles',
-  templateUrl: './carriles.component.html',
+ templateUrl: './carriles.component.html',
   styleUrls: ['./carriles.component.css']
 })
 export class CarrilesComponent implements OnInit{
 
-  listaItemsCarrito: ItemCarrito [] | undefined
+  listaItemsCarrito: ItemA [] | undefined;
 
 
 ngOnInit(): void {
