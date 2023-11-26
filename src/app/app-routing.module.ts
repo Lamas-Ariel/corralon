@@ -8,7 +8,7 @@ import { MaterialesComponent } from './stock/materiales/materiales.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'stock',component:MaterialesComponent},
+  {path:'producto',component:MaterialesComponent},
 
   {path:'login',component:LoginComponent},
   {path:'contacto',component:ContactoComponent},
