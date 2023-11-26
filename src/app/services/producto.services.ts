@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ProductosA } from '../models/modelsA/ProductosA';
+import { CategoriaA } from '../models/modelsA/CategoriaA';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,10 @@ export class ProductoService {
 //obtener x id
   getXid(id:number):Observable<ProductosA>{
     return this.http.get<ProductosA>(this.urlEndPoint+'/'+id);
+  }
+  //obtener x categoria
+  getxCat(CategoriaA:CategoriaA):Observable<ProductosA>{
+    return this.http.get<ProductosA>(this.urlEndPoint+'/'+CategoriaA)
   }
   //crear 
   crear(producto:ProductosA):Observable<ProductosA>{

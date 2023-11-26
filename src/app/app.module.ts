@@ -12,9 +12,8 @@ import { PresupuestoModule } from './presupuesto/presupuesto.module';
 import {HttpClientModule} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductoService } from 'src/app/services/producto.services';
+import { StockModule } from './stock/stock.module';
 
-// const routes: Routes=[
-  // {path:'medios-pagos', component: MediosPagosComponent }
 
 @NgModule({
   declarations: [
@@ -29,6 +28,7 @@ import { ProductoService } from 'src/app/services/producto.services';
     LoginModule,
     PresupuestoModule,
     HttpClientModule,
+    StockModule,
    // RouterModule.forRoot(RouterModule)
     //ReactiveFormsModule,
   ],
