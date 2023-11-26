@@ -1,3 +1,7 @@
+
+
+
+
 import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { productos } from '../data/dtosProductos';
