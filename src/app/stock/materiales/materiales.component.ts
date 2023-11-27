@@ -12,21 +12,20 @@ import { Router } from '@angular/router';
 })
 export class MaterialesComponent implements OnInit{
   listaMateriales: ProductosA []= [];
+  
   constructor(private ProductoService:ProductoService, private router:Router){}
+  
   ngOnInit(): void {
     console.log('ejectuta materiales');
+    this.ProductoService.getTodos().subscribe(
+      response=>{
+        console.log('lista prod DB' , response)
+        this.listaMateriales = response;
+        console.log('lista prod', this.listaMateriales);
+      }
+    )
   }
 
-  
-obtenerTodos(): void {
-  this.ProductoService.getTodos().subscribe(
-    response=>{
-      console.log('lista prod DB' , response)
-      this.listaMateriales = response;
-      console.log('lista prod', this.listaMateriales);
-    }
-  )
-}
 }
 
 
