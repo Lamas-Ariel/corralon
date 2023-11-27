@@ -11,7 +11,7 @@ export class ProductoService {
 
   constructor(private http:HttpClient) { }
 //url puerto: ap propieties by Spring
-  private urlEndPoint: string = 'http://localhost:8084/api'+'/producto';
+  private urlEndPoint: string = 'http://localhost:8084/api'+'/productos';
 //obtener Todos
   getTodos():Observable<ProductosA[]>{
     return this.http.get<ProductosA[]>(this.urlEndPoint);

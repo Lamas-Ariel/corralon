@@ -2,7 +2,7 @@ import { NgClass } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ProductosA } from 'src/app/models/modelsA/ProductosA';
 import { ItemA } from '../../models/modelsA/ItemA';
-import { itemCarrito } from '../../models/ItemCarrito';
+import { itemCarrito } from '../../models/itemCarrito';
 import { ProductoService } from 'src/app/services/producto.services';
 
 @Component({
