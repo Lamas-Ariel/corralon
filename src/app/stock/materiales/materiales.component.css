@@ -1,0 +1,6 @@
+.btnCarrito{
+    cursor:pointer;
+}
+.btnCarrito:hover{
+color: orange;
+}
