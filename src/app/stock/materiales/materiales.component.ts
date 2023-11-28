@@ -15,6 +15,9 @@ export class MaterialesComponent implements OnInit{
   ItemA: ItemA;
   lista2: ProductosA[] = [];
   productoElegido: ProductosA = new ProductosA();
+  //buscador
+  productoBuscado: string = '';
+  productos:ProductosA[];
   
   constructor(private ProductoService:ProductoService, private router:Router){}
   
@@ -23,6 +26,8 @@ export class MaterialesComponent implements OnInit{
     this.ProductoService.getTodos().subscribe(
       response=>{
         console.log('lista prod DB' , response)
+        //cargaNuevalista en productos
+        this.productos=response;
         this.listaMateriales = response;
         console.log('lista prod', this.listaMateriales);
       }
@@ -66,6 +71,12 @@ export class MaterialesComponent implements OnInit{
      }
    }
  }
+
+ buscarXNombre(): void{
+  this.listaMateriales = this.productos.filter(nombre=>
+    nombre.nom.toUpperCase().includes(this.productoBuscado.toUpperCase()));
+  console.log(this.productos);
+}
 
 }
 

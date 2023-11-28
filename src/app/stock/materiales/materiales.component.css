@@ -4,3 +4,22 @@
 .btnCarrito:hover{
 color: orange;
 }
+
+.input-cont {
+    position: relative;
+    
+  }
+
+  /* Estilos para el icono */
+  .icon {
+    position: absolute;
+    top: 50%;
+    right: 30px; /* Puedes ajustar el valor según tu preferencia */
+    transform: translateY(-50%);
+    
+  }
+
+  /* Estilos para el input */
+  .input-field {
+    padding-right: 30px; /* Ajusta este valor según el tamaño de tu icono */
+  }

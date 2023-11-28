@@ -45,3 +45,12 @@
     color: #dc3545;
     margin-top: 5px;
 }
+
+/* validaciones de colores de formularios */
+.ng-valid:not(form).ng-touched {
+    border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form).ng-touched {
+    border-left: 5px solid #a94442;
+}
