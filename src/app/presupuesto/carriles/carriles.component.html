@@ -57,9 +57,9 @@
                     <td>{{item.id}}</td>
                     <td>{{item.producto.nom}}</td>
                     <td>{{item.producto.precio}}</td>
-                    <td> <button>-</button>
+                    <td> <button (click)="quitar(item.id)">-</button>
                         {{item.cantidad}}
-                        <button>+</button>
+                        <button (click)="agregar(item.id)">+</button>
                     </td>
                     <td>{{item.producto.precio! * item.cantidad!}}</td>
                     <td class="btnEliminar" title='Eliminar' (click)="eliminarProducto(item.producto.id)"><i
@@ -68,8 +68,8 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <th colspan="4" class="text-end">Total</th>
-                    <th id="total-carrito" class="text-end"></th>
+                    <th colspan="4" class="text-end" >Total</th>
+                    <th id="total-carrito" class="text-end">{{suma}}</th>
                 </tr>
             </tfoot>
 

@@ -2,7 +2,6 @@
     <div class="row login-container">
         <div class="col-6 justify-content-center">
             <form [formGroup]="loginForm" class="login-form">
-                <form [formGroup]="loginForm">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email</label>
                         <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1"
@@ -27,7 +26,6 @@
                     </div>
                     <button type="button" (click)="login()" class="btn btn-primary">Iniciar Seccion</button>
                 </form>
-            </form>
         </div>
     </div>
 </div>
