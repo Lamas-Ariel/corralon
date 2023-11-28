@@ -9,7 +9,7 @@ import { ItemA } from 'src/app/models/modelsA/ItemA';
 })
 export class CarrilesComponent implements OnInit {
   listaItemsCarrito: ItemA[] | undefined;
-
+suma: number;
   ngOnInit(): void {
 
     let carritoStorage = localStorage.getItem('carrito') as string;
@@ -17,14 +17,17 @@ export class CarrilesComponent implements OnInit {
     this.listaItemsCarrito = carrito;
 
     const calcularTotal = () => {
-      let suma = 0;
+      this.suma = 0;
       for (let i = 0; i < carrito.length; i++) {
-        suma += carrito[i].precio * carrito[i].cantidad;
+        this.suma += carrito[i].producto.precio * carrito[i].cantidad;
+        console.log(carrito);
+        console.log(this.suma);
       }
 
-      document.getElementById('total-carrito').innerHTML =
-        Number(suma).toFixed(2);
+      /*document.getElementById('total-carrito').innerHTML =
+        Number(suma).toFixed(2);*/
     };
+
 
     calcularTotal();
   }
@@ -37,5 +40,30 @@ export class CarrilesComponent implements OnInit {
     this.listaItemsCarrito = this.listaItemsCarrito.filter(
       (articulo) => articulo.id !== id
     );
+  }
+
+  agregar(id: number): void {
+    for (const e of this.listaItemsCarrito) {
+      if(e.id == id) {
+        e.cantidad = e.cantidad + 1;
+      }
+    }
+    this.sumaTotalP();
+  }
+
+  quitar(id: number): void {
+    for (const e of this.listaItemsCarrito) {
+      if(e.id == id && e.cantidad>1) {
+        e.cantidad = e.cantidad - 1;
+      }
+    }
+    this.sumaTotalP();
+  }
+
+  sumaTotalP(): void {
+    this.suma = 0;
+    for (const i of this.listaItemsCarrito) {
+      this.suma += i.producto.precio * i.cantidad;
+    }
   }
 }
