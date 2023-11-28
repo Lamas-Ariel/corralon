@@ -31,8 +31,7 @@ export class MediosPagosComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // throw new Error('Method not implemented.');
-    // console.log(this.lista2);
+    
   }
 
   verProducto(pro: ProductosA): void {
@@ -72,17 +71,5 @@ export class MediosPagosComponent implements OnInit {
      }
    }
  }
-  // agregarCarrito(item: ProductosA){
-  //   console.log(item);
-
-  //   let iCarrito: ItemA = {
-  //     id: item.id,
-  //     producto: item,
-  //     cantidad: 1,
-  //   }
-  //   let carrito: ItemA[] = [];
-  //   carrito.push(iCarrito);
-  //   localStorage.setItem('carrito', JSON.stringify(carrito));
-  // }
 
 }
