@@ -30,7 +30,7 @@ import { StockModule } from './stock/stock.module';
     HttpClientModule,
     StockModule,
    // RouterModule.forRoot(RouterModule)
-    //ReactiveFormsModule,
+    ReactiveFormsModule,
   ],
 
   providers: [ProductoService],
