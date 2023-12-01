@@ -48,7 +48,7 @@
 
 /* validaciones de colores de formularios */
 .ng-valid:not(form).ng-touched {
-    border-left: 5px solid #42A948;
+    border-left: 5px solid #fffc43;
 }
 
 .ng-invalid:not(form).ng-touched {
@@ -63,5 +63,5 @@ input:active, input:focus, label:hover {
 }
 
 svg{
-    color: rgba(35, 122, 79, 0.911);
+    color: rgba(240, 75, 34, 0.911);
 }

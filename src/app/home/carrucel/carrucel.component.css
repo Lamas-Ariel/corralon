@@ -1,0 +1,45 @@
+
+
+.videoresponsive{
+    
+position: relative;
+ padding-bottom: 150px;/* 16/9 ratio */
+padding-top: 30px; /* IE6 workaround*/
+height: 0;
+overflow: hidden;
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.publicity{
+    background: #000;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.publi{
+    position: relative;
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.logo{
+    background: #000;
+    font-size: 80px;
+    text-align: center;
+    font-weight: 150px;
+    mix-blend-mode: multiply;
+}
