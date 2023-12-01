@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuarioA } from 'src/app/models/modelsA/UsuarioA';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -47,7 +48,13 @@ export class InicioSesionComponent implements OnInit {
           console.log('usuario ingresado',this.usuarioLogin);
         })
         console.log(this.user);
-        alert('Inicio de sesion correcto')
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Inicio exitoso",
+          showConfirmButton: false,
+          timer: 1500
+        });
         this.router.navigate(['producto']);
       } else {
         this.error=true;

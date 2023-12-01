@@ -1,14 +1,25 @@
-<h1>ELEGÍ TUS PRODUCTOS</h1>
+
 
 <div class="row">
-    <div class="container input-cont col-4 justify-content-center">
+    <!-- <div class="container input-cont col-4 justify-content-center">
         <input class="input-field form-control me-2" [(ngModel)]="productoBuscado" placeholder="ingrese nombre producto"
             aria-label="Search">
         <i (click)="buscarXNombre()" class="icon bi bi-search" type="button"></i>
-    </div>
+    </div> -->
+
+    <nav class="navbar w-75 mx-auto">
+        <div class="container-fluid " >
+          <a class="navbar-brand text-dark" ><h1>ELEGÍ TUS PRODUCTOS</h1></a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 w-75px" [(ngModel)]="productoBuscado" type="search" placeholder="Ing. nombre producto" aria-label="Search" name="Buscar">
+            <button class="btn btn-warning m-1" type="button" (click)="buscarXNombre()" >Buscar</button>
+            <a class="btn btn-warning m-1" href="presupuesto"><i class="bi bi-cart"></i></a>
+          </form>
+        </div>
+      </nav>
 </div>
 
-<a class="btn btn-warning " href="presupuesto">Ver Carrito</a>
+
 
 <div class="row">
 

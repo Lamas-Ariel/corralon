@@ -1,3 +1,7 @@
 *color{
     background-color: darkorange;
 }
+
+a:hover{
+    color: azure;
+}

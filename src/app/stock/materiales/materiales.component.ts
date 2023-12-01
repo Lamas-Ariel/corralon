@@ -4,6 +4,7 @@ import { ProductoService } from '../../services/producto.services';
 import { ProductosA } from 'src/app/models/modelsA/ProductosA';
 import { ItemA } from 'src/app/models/modelsA/ItemA';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-materiales',
@@ -40,6 +41,14 @@ export class MaterialesComponent implements OnInit{
   }
 
  agregarCarrito(item: ProductosA) {
+  //alerta carrito
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    title: "Producto agregado",
+    showConfirmButton: false,
+    timer: 1500
+  });
    let iCarrito: ItemA = {
      id: item.id,
      producto: item,
